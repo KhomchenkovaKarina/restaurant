@@ -1,0 +1,326 @@
+// .container {
+//     width: 100%;
+// }
+@function sizeToRem($pixels) {
+    @return #{$pixels / 16}rem;
+}
+
+@function heightVh($pixels) {
+    @return #{$pixels/1080 * 100}vh;
+}
+
+@function widthVw($pixels) {
+    @return #{$pixels/1920 * 100}vw;
+}
+
+$orange: #e76020;
+$footer-color: #121212;
+
+%dark-layout {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.book-now {
+    width: widthVw(420);
+    height: heightVh(80);
+    border: 1px solid $orange;
+    border-radius: 10px;
+    background: $orange;
+    font: sizeToRem(27.7)/1 'PT Sans';
+    color: #fff;
+    font-weight: bold;
+    padding: heightVh(22) widthVw(70);
+}
+
+
+.intro {
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/images/home-bgr.png) no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        @extend %dark-layout;
+        height: calc(100vh - heightVh(46));
+        width: 100%;
+    }
+
+    > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__header{
+        width: 100%;
+        line-height: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: fixed;
+    }
+
+    &__header-wrapper {
+    height: heightVh(111);
+    margin: 0 widthVw(320);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    &__header-left {
+        font: sizeToRem(40)/1 'Bona Nova';
+        font-weight: bold;
+    }
+
+    &__header-right {
+        font: sizeToRem(20)/1 'PT Sans';
+        font-weight: bold;
+        display: flex;
+        direction: row;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        gap: widthVw(79);
+    }
+
+    main {
+        height: 100%;
+    }
+
+    &__middle-part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        h1 {
+            font: sizeToRem(96)/1 'Bona Nova';
+            margin-bottom: heightVh(35);
+            text-align: center;
+        }
+
+        button {
+            margin-bottom: heightVh(293);
+        }
+    }
+}
+
+.gallery {
+    display: flex;
+
+    &__image {
+        width: widthVw(950);
+        height: heightVh(653);
+    }
+
+    &__wrapper-text {
+        width: widthVw(505);
+        height: heightVh(415.11);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__right-part {
+        width: widthVw(970);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            font: sizeToRem(32)/1 'Bona Nova';
+            font-weight: bold;
+            margin-bottom: heightVh(30);
+        }
+        p {
+            font: sizeToRem(18)/1.2 'PT Sans';
+            margin-bottom: heightVh(15);
+        }
+    }
+
+    &__wrapper-arrows {
+        display: flex;
+        gap: 52px;
+        margin-top: widthVw(42);
+    }
+
+    &__left-arrow {
+        background: url(../assets/images/Vector-left.svg) no-repeat;
+        background-size: contain;
+        min-width: 17px;
+        min-height: 30.22px;
+    }
+
+    &__right-arrow {
+        background: url(../assets/images/Vector-right.svg) no-repeat;
+        background-size: contain;
+        min-width: 17px;
+        min-height: 30.22px;
+    }
+}
+
+.reviews {
+    background: url(../assets/images/black-bgr.jpg) no-repeat;
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    height: heightVh(650);
+    font-family: 'PT Sans';
+    line-height: 1;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+        @extend %dark-layout;
+    }
+
+    > * {
+        position: relative;
+        z-index: 2; /* поднимаем контент выше подложки */
+    }
+
+    h2 {
+        font: sizeToRem(32)/1 'Bona Nova';
+        color: #fff;
+        font-weight: bold;
+        padding-top: heightVh(93);
+        padding-bottom: heightVh(35);
+        margin-left: widthVw(258);
+    }
+
+    &__wrapper {
+        width: 100%;
+        height: heightVh(650);
+        display: flex;
+        gap: widthVw(35);
+        justify-content: center;
+    }
+
+    &__review {
+        width: widthVw(675);
+        height: heightVh(319);
+        background: #fff;
+        display: flex;
+        gap: widthVw(30);
+    }
+
+    &__author-and-stars {
+        display: flex;
+        padding-top: heightVh(48);
+        justify-content: space-between;
+    }
+
+    &__avatar {
+        width: widthVw(104);
+        height: heightVh(104);
+        margin-left: widthVw(27);
+        margin-top: heightVh(31);
+    }
+
+    &__star {
+        margin: -3px;
+    }
+
+    &__author {
+        font-weight: bold;
+        font-size: sizeToRem(24);
+    }
+
+    &__text {
+        line-height: 1.2;
+        margin-top: heightVh(33);
+        font-size: sizeToRem(18);
+        width: widthVw(459);
+    }
+
+    &__arrow-left {
+        background: url(../assets/images/reviews-left-arrow.svg) no-repeat;
+        background-size: contain;
+        width: widthVw(91);
+        height: heightVh(162);
+    }
+
+    &__arrow-right {
+        background: url(../assets/images/reviews-right-arrow.svg) no-repeat;
+        background-size: contain;
+        width: widthVw(91);
+        height: heightVh(162);
+    }
+}
+
+.arrow {
+    margin-top: heightVh(78);
+
+}
+
+.info {
+    height: heightVh(701);
+    width: 100%;
+    display: flex;
+
+    &__left-part {
+        width: widthVw(950);
+        object-fit: cover;
+    }
+
+    &__right-part {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: start;
+        margin-left: widthVw(182);
+        gap: heightVh(50);
+        font: sizeToRem(22)/1.24 'PT Sans';
+    }
+
+    address {
+        font-style: normal;
+        text-align: left;
+        width: widthVw(464);
+        height: heightVh(216);
+
+        strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        p {
+            display: block;
+            margin-top: 30px;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: heightVh(212);
+    background: $footer-color;
+    color: #fff;
+
+    p {
+        font: sizeToRem(26)/1 'Bona Nova';
+        margin-left: widthVw(323);
+    }
+
+    &__social-networks {
+        font: sizeToRem(26)/1.25 'PT Sans';
+        margin-right: widthVw(174);
+    }
+
+    &__icons {
+        background: url(../assets/images/social.svg);
+    }
+}
