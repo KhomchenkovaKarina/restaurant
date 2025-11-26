@@ -1,0 +1,199 @@
+@import 'colors';
+@import 'common';
+
+.intro {
+    color: #fff;
+    height: heightVh(111);
+    width: 100%;
+    background: #000;
+    position: relative;
+
+    &::before {
+        @extend %dark-layout;
+        height: heightVh(111);
+        width: 100%;
+    }
+
+    >* {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__header-container {
+        width: 100%;
+        line-height: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        z-index: 3;
+    }
+
+    &__header-wrapper {
+        height: heightVh(111);
+        margin: 0 widthVw(320);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__header-left {
+        font: sizeToRem(40)/1 'Bona Nova';
+        font-weight: bold;
+        letter-spacing: 2.4px;
+    }
+
+    &__header-right {
+        font: sizeToRem(20)/1 'PT Sans';
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        gap: widthVw(79);
+        position: relative;
+        z-index: 3;
+
+        li {
+            cursor: pointer;
+        }
+
+        li:active {
+            color: #9E9E9E;
+        }
+    }
+}
+
+.reservation {
+    display: flex;
+    align-items: center;
+
+    &__title {
+        font: sizeToRem(32)/1 'Bona Nova';
+        font-weight: bold;
+        text-align: left;
+    }
+
+    &__right-part {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    &__right-part p {
+        font: sizeToRem(22)/1.25 'PT Sans';
+        margin-top: heightVh(20);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: heightVh(34);
+        margin-top: heightVh(52);
+    }
+
+    &__input {
+        font-size: sizeToRem(18);
+        position: relative;
+        padding-bottom: 2px;
+        font-family: Arial, Helvetica, sans-serif;
+        border-bottom: 1px solid #000;
+        padding-bottom: heightVh(20);
+    }
+
+    &__input::placeholder {
+        color: $input;
+    }
+
+    &__number {
+        width: 10px;
+        font-size: sizeToRem(18);
+        color: #000;
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+
+    &__guests {
+        display: flex;
+        margin: heightVh(39) 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__form-element {
+        color: $input;
+        font: sizeToRem(18) 'PT Sans'
+    }
+
+    #datetimepicker {
+        width: widthVw(122);
+    }
+
+    #datetimepicker::placeholder {
+        color: $input;
+        font: sizeToRem(18) 'PT Sans';
+        position: relative;
+    }
+
+    &__open-calendar {
+        background: url(../assets/images/arrow-reservation.svg) no-repeat;
+        background-size: contain;
+        width: 11px;
+        height: 8px;
+    }
+
+    &__number-control {
+        border: 2px solid #000;
+        width: 22px;
+        border-radius: 4px;
+        background: #fff;
+        font-weight: bold;
+        height: 22px;
+    }
+
+    &__number-control:nth-child(3) {
+        margin-right: widthVw(12);
+    }
+
+    &__wishes {
+        margin-bottom: heightVh(37);
+    }
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: heightVh(212);
+    background: $footer-color;
+    color: #fff;
+    background-color: $footer-color;
+    flex-wrap: wrap;
+
+    &__name {
+        font: sizeToRem(26)/1 'Bona Nova';
+        margin-left: widthVw(323);
+        letter-spacing: 1.04px;
+        font-weight: bold;
+    }
+
+    &__icons {
+        font: sizeToRem(26)/1 'PT Sans';
+        text-align: right;
+        margin-right: widthVw(174);
+
+        p {
+            font-weight: bold;
+        }
+    }
+
+    &__icons :last-child {
+        margin-top: heightVh(15);
+    }
+
+}
+
+.footer>* {
+    margin-top: heightVh(50);
+}

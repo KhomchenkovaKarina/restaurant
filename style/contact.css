@@ -1,0 +1,200 @@
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.book-now {
+  width: 21.875vw;
+  height: 7.4074074074vh;
+  border: 1px solid #e76020;
+  border-radius: 10px;
+  background: #e76020;
+  font: 1.6875rem/1 "PT Sans";
+  color: #fff;
+  font-weight: bold;
+  padding: 2.037037037vh 3.6458333333vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  color: #fff;
+  height: 10.2777777778vh;
+  width: 100%;
+  background: #000;
+  position: relative;
+}
+.intro::before {
+  height: 10.2777777778vh;
+  width: 100%;
+}
+.intro > * {
+  position: relative;
+  z-index: 2;
+}
+.intro__header-container {
+  width: 100%;
+  line-height: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 3;
+}
+.intro__header-wrapper {
+  height: 10.2777777778vh;
+  margin: 0 16.6666666667vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.intro__header-left {
+  font: 2.5rem/1 "Bona Nova";
+  font-weight: bold;
+  letter-spacing: 2.4px;
+}
+.intro__header-right {
+  font: 1.25rem/1 "PT Sans";
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+.intro ul {
+  display: flex;
+  gap: 4.1145833333vw;
+  position: relative;
+  z-index: 3;
+}
+.intro ul li {
+  cursor: pointer;
+}
+.intro ul li:active {
+  color: #9E9E9E;
+}
+
+.reservation {
+  display: flex;
+  align-items: center;
+}
+.reservation__title {
+  font: 2rem/1 "Bona Nova";
+  font-weight: bold;
+  text-align: left;
+}
+.reservation__right-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+.reservation__right-part p {
+  font: 1.375rem/1.25 "PT Sans";
+  margin-top: 1.8518518519vh;
+}
+.reservation__form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.1481481481vh;
+  margin-top: 4.8148148148vh;
+}
+.reservation__input {
+  font-size: 1.125rem;
+  position: relative;
+  padding-bottom: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1.8518518519vh;
+}
+.reservation__input::-moz-placeholder {
+  color: #B2B2B2;
+}
+.reservation__input::placeholder {
+  color: #B2B2B2;
+}
+.reservation__number {
+  width: 10px;
+  font-size: 1.125rem;
+  color: #000;
+  margin-left: 13px;
+  margin-right: 13px;
+}
+.reservation__guests {
+  display: flex;
+  margin: 3.6111111111vh 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.reservation__form-element {
+  color: #B2B2B2;
+  font: 1.125rem "PT Sans";
+}
+.reservation #datetimepicker {
+  width: 6.3541666667vw;
+}
+.reservation #datetimepicker::-moz-placeholder {
+  color: #B2B2B2;
+  font: 1.125rem "PT Sans";
+  position: relative;
+}
+.reservation #datetimepicker::placeholder {
+  color: #B2B2B2;
+  font: 1.125rem "PT Sans";
+  position: relative;
+}
+.reservation__open-calendar {
+  background: url(../assets/images/arrow-reservation.svg) no-repeat;
+  background-size: contain;
+  width: 11px;
+  height: 8px;
+}
+.reservation__number-control {
+  border: 2px solid #000;
+  width: 22px;
+  border-radius: 4px;
+  background: #fff;
+  font-weight: bold;
+  height: 22px;
+}
+.reservation__number-control:nth-child(3) {
+  margin-right: 0.625vw;
+}
+.reservation__wishes {
+  margin-bottom: 3.4259259259vh;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 19.6296296296vh;
+  background: #121212;
+  color: #fff;
+  background-color: #121212;
+  flex-wrap: wrap;
+}
+.footer__name {
+  font: 1.625rem/1 "Bona Nova";
+  margin-left: 16.8229166667vw;
+  letter-spacing: 1.04px;
+  font-weight: bold;
+}
+.footer__icons {
+  font: 1.625rem/1 "PT Sans";
+  text-align: right;
+  margin-right: 9.0625vw;
+}
+.footer__icons p {
+  font-weight: bold;
+}
+.footer__icons :last-child {
+  margin-top: 1.3888888889vh;
+}
+
+.footer > * {
+  margin-top: 4.6296296296vh;
+}/*# sourceMappingURL=contact.css.map */

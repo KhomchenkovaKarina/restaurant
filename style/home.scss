@@ -1,44 +1,5 @@
-// .container {
-//     width: 100%;
-// }
-@function sizeToRem($pixels) {
-    @return #{$pixels / 16}rem;
-}
-
-@function heightVh($pixels) {
-    @return #{$pixels/1080 * 100}vh;
-}
-
-@function widthVw($pixels) {
-    @return #{$pixels/1920 * 100}vw;
-}
-
-$orange: #e76020;
-$footer-color: #121212;
-
-%dark-layout {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.book-now {
-    width: widthVw(420);
-    height: heightVh(80);
-    border: 1px solid $orange;
-    border-radius: 10px;
-    background: $orange;
-    font: sizeToRem(27.7)/1 'PT Sans';
-    color: #fff;
-    font-weight: bold;
-    padding: heightVh(22) widthVw(70);
-}
-
+@import 'colors';
+@import 'common';
 
 .intro {
     color: #fff;
@@ -64,6 +25,7 @@ $footer-color: #121212;
         line-height: 1;
         background-color: rgba(0, 0, 0, 0.6);
         position: fixed;
+        z-index: 3;
     }
 
     &__header-wrapper {
@@ -77,19 +39,29 @@ $footer-color: #121212;
     &__header-left {
         font: sizeToRem(40)/1 'Bona Nova';
         font-weight: bold;
+        letter-spacing: 2.4px;
     }
 
     &__header-right {
         font: sizeToRem(20)/1 'PT Sans';
         font-weight: bold;
         display: flex;
-        direction: row;
         justify-content: space-between;
     }
 
     ul {
         display: flex;
         gap: widthVw(79);
+        position: relative;
+        z-index: 3;
+
+        li {
+            cursor: pointer;
+        }
+
+        li:active {
+            color: #9E9E9E;
+        }
     }
 
     main {
@@ -107,34 +79,31 @@ $footer-color: #121212;
             margin-bottom: heightVh(35);
             text-align: center;
         }
-
-        button {
-            margin-bottom: heightVh(293);
-        }
     }
 }
 
 .gallery {
-    display: flex;
-
     &__image {
         width: widthVw(950);
         height: heightVh(653);
     }
 
-    &__wrapper-text {
+    &__right-part {
+        width: widthVw(970);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 0;
+    }
+
+    &__wrapper-right-part {
         width: widthVw(505);
         height: heightVh(415.11);
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-
-    &__right-part {
-        width: widthVw(970);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        min-width: 0;
 
         h2 {
             font: sizeToRem(32)/1 'Bona Nova';
@@ -150,21 +119,25 @@ $footer-color: #121212;
     &__wrapper-arrows {
         display: flex;
         gap: 52px;
-        margin-top: widthVw(42);
+        margin-top: heightVh(58);
+        min-width: 0;
     }
 
-    &__left-arrow {
-        background: url(../assets/images/Vector-left.svg) no-repeat;
-        background-size: contain;
-        min-width: 17px;
-        min-height: 30.22px;
+    .swiper-button-prev {
+        position: initial;
+        color: #1E1E1E;
+
     }
 
-    &__right-arrow {
-        background: url(../assets/images/Vector-right.svg) no-repeat;
-        background-size: contain;
-        min-width: 17px;
-        min-height: 30.22px;
+    .swiper-button-next {
+        position: initial;
+        color: #1E1E1E;
+    }
+}
+
+.image-slider {
+    &__slide {
+        display: flex;
     }
 }
 
@@ -179,6 +152,7 @@ $footer-color: #121212;
     color: #000;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 
     &::before {
         @extend %dark-layout;
@@ -199,23 +173,28 @@ $footer-color: #121212;
     }
 
     &__wrapper {
-        width: 100%;
+        // width: 100%;
         height: heightVh(650);
+    }
+
+    &__block {
         display: flex;
-        gap: widthVw(35);
         justify-content: center;
+        gap: widthVw(35);
     }
 
     &__review {
-        width: widthVw(675);
+        width: widthVw(675) !important;
         height: heightVh(319);
         background: #fff;
         display: flex;
         gap: widthVw(30);
+        min-width: 0;
     }
 
     &__author-and-stars {
         display: flex;
+        min-width: 0;
         padding-top: heightVh(48);
         justify-content: space-between;
     }
@@ -243,24 +222,22 @@ $footer-color: #121212;
         width: widthVw(459);
     }
 
-    &__arrow-left {
-        background: url(../assets/images/reviews-left-arrow.svg) no-repeat;
-        background-size: contain;
-        width: widthVw(91);
-        height: heightVh(162);
-    }
-
+    &__arrow-left,
     &__arrow-right {
-        background: url(../assets/images/reviews-right-arrow.svg) no-repeat;
-        background-size: contain;
+        color: transparent;
+        position: absolute;
+        top: 70% !important;
         width: widthVw(91);
-        height: heightVh(162);
+        height: heightVh(162);  
     }
-}
-
-.arrow {
-    margin-top: heightVh(78);
-
+    
+    &__arrow-left {
+        left: 10px;
+    }
+    
+    &__arrow-right {
+        right: 10px;
+    }
 }
 
 .info {
@@ -288,11 +265,10 @@ $footer-color: #121212;
         font-style: normal;
         text-align: left;
         width: widthVw(464);
-        height: heightVh(216);
+        height: 22vh;
 
         strong {
             display: block;
-            margin-bottom: 10px;
         }
 
         p {
@@ -302,25 +278,39 @@ $footer-color: #121212;
     }
 }
 
-footer {
+.footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
     height: heightVh(212);
     background: $footer-color;
     color: #fff;
+    background-color: $footer-color;
+    flex-wrap: wrap;
 
-    p {
+    &__name {
         font: sizeToRem(26)/1 'Bona Nova';
         margin-left: widthVw(323);
-    }
-
-    &__social-networks {
-        font: sizeToRem(26)/1.25 'PT Sans';
-        margin-right: widthVw(174);
+        letter-spacing: 1.04px;
+        font-weight: bold;
     }
 
     &__icons {
-        background: url(../assets/images/social.svg);
+        font: sizeToRem(26)/1 'PT Sans';
+        text-align: right;
+        margin-right: widthVw(174);
+
+        p {
+            font-weight: bold;
+        }
     }
+
+    &__icons :last-child {
+        margin-top: heightVh(15);
+    }
+
+}
+
+.footer > * {
+    margin-top: heightVh(50);
 }

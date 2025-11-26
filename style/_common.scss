@@ -1,0 +1,37 @@
+@function sizeToRem($pixels) {
+    @return #{$pixels / 16}rem;
+}
+
+@function heightVh($pixels) {
+    @return #{$pixels/1080 * 100}vh;
+}
+
+@function widthVw($pixels) {
+    @return #{$pixels/1920 * 100}vw;
+}
+
+%dark-layout {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.book-now {
+    width: widthVw(420);
+    height: heightVh(80);
+    border: 1px solid $orange;
+    border-radius: 10px;
+    background: $orange;
+    font: sizeToRem(27)/1 'PT Sans';
+    color: #fff;
+    font-weight: bold;
+    padding: heightVh(22) widthVw(70);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
