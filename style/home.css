@@ -56,13 +56,11 @@
   align-items: center;
 }
 .intro__header-left {
-  font: 2.5rem/1 "Bona Nova";
-  font-weight: bold;
+  font: bold 2.5rem/1 "Bona Nova";
   letter-spacing: 2.4px;
 }
 .intro__header-right {
-  font: 1.25rem/1 "PT Sans";
-  font-weight: bold;
+  font: bold 1.25rem/1 "PT Sans";
   display: flex;
   justify-content: space-between;
 }
@@ -115,8 +113,7 @@
   min-width: 0;
 }
 .gallery__wrapper-right-part h2 {
-  font: 2rem/1 "Bona Nova";
-  font-weight: bold;
+  font: bold 2rem/1 "Bona Nova";
   margin-bottom: 2.7777777778vh;
 }
 .gallery__wrapper-right-part p {
@@ -160,9 +157,8 @@
   z-index: 2; /* поднимаем контент выше подложки */
 }
 .reviews h2 {
-  font: 2rem/1 "Bona Nova";
+  font: bold 2rem/1 "Bona Nova";
   color: #fff;
-  font-weight: bold;
   padding-top: 8.6111111111vh;
   padding-bottom: 3.2407407407vh;
   margin-left: 13.4375vw;
@@ -267,10 +263,9 @@
   flex-wrap: wrap;
 }
 .footer__name {
-  font: 1.625rem/1 "Bona Nova";
+  font: bold 1.625rem/1 "Bona Nova";
   margin-left: 16.8229166667vw;
   letter-spacing: 1.04px;
-  font-weight: bold;
 }
 .footer__icons {
   font: 1.625rem/1 "PT Sans";

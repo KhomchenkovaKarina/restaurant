@@ -37,14 +37,12 @@
     }
 
     &__header-left {
-        font: sizeToRem(40)/1 'Bona Nova';
-        font-weight: bold;
+        font: bold sizeToRem(40)/1 'Bona Nova';
         letter-spacing: 2.4px;
     }
 
     &__header-right {
-        font: sizeToRem(20)/1 'PT Sans';
-        font-weight: bold;
+        font: bold sizeToRem(20)/1 'PT Sans';
         display: flex;
         justify-content: space-between;
     }
@@ -106,8 +104,7 @@
         min-width: 0;
 
         h2 {
-            font: sizeToRem(32)/1 'Bona Nova';
-            font-weight: bold;
+            font: bold sizeToRem(32)/1 'Bona Nova';
             margin-bottom: heightVh(30);
         }
         p {
@@ -164,9 +161,8 @@
     }
 
     h2 {
-        font: sizeToRem(32)/1 'Bona Nova';
+        font: bold sizeToRem(32)/1 'Bona Nova';
         color: #fff;
-        font-weight: bold;
         padding-top: heightVh(93);
         padding-bottom: heightVh(35);
         margin-left: widthVw(258);
@@ -289,10 +285,9 @@
     flex-wrap: wrap;
 
     &__name {
-        font: sizeToRem(26)/1 'Bona Nova';
+        font: bold sizeToRem(26)/1 'Bona Nova';
         margin-left: widthVw(323);
         letter-spacing: 1.04px;
-        font-weight: bold;
     }
 
     &__icons {

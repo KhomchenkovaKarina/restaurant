@@ -3,8 +3,7 @@
 
 .nav__button {
     color: #fff;
-    font: sizeToRem(20)/1 'PT Sans';
-    font-weight: bold;
+    font: bold sizeToRem(20)/1 'PT Sans';
     border: 2px solid #fff;
     padding: 10px 32px;
     border-radius: 10px;
@@ -46,14 +45,12 @@
     }
 
     &__header-left {
-        font: sizeToRem(40)/1 'Bona Nova';
-        font-weight: bold;
+        font: bold sizeToRem(40)/1 'Bona Nova';
         letter-spacing: 2.4px;
     }
 
     &__header-right {
-        font: sizeToRem(20)/1 'PT Sans';
-        font-weight: bold;
+        font: bold sizeToRem(20)/1 'PT Sans';
         display: flex;
         justify-content: space-between;
     }
@@ -117,8 +114,7 @@ main {
         height: heightVh(93);
         width: widthVw(299);
         padding: 15px 88px 16px 33px;
-        font: sizeToRem(24)/1 'PT Sans';
-        font-weight: bold;
+        font: bold sizeToRem(24)/1 'PT Sans';
         display: flex;
         align-items: center;
     }
@@ -174,10 +170,9 @@ main {
             border: 1px solid $orange;
             background-color: $orange;
             border-radius: 10px;
-            font: 1em 'PT Sans';
+            font: bold 1em 'PT Sans';
             font-size: sizeToRem(27.7);
             color: #fff;
-            font-weight: bold;
             align-self: center;
         }
     }
@@ -199,10 +194,9 @@ main {
     flex-wrap: wrap;
 
     &__name {
-        font: sizeToRem(26)/1 'Bona Nova';
+        font: bold sizeToRem(26)/1 'Bona Nova';
         margin-left: widthVw(323);
         letter-spacing: 1.04px;
-        font-weight: bold;
     }
 
     &__icons {

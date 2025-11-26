@@ -54,13 +54,11 @@
   align-items: center;
 }
 .intro__header-left {
-  font: 2.5rem/1 "Bona Nova";
-  font-weight: bold;
+  font: bold 2.5rem/1 "Bona Nova";
   letter-spacing: 2.4px;
 }
 .intro__header-right {
-  font: 1.25rem/1 "PT Sans";
-  font-weight: bold;
+  font: bold 1.25rem/1 "PT Sans";
   display: flex;
   justify-content: space-between;
 }
@@ -82,9 +80,12 @@
   align-items: center;
 }
 .reservation__title {
-  font: 2rem/1 "Bona Nova";
-  font-weight: bold;
+  font: bold 2rem/1 "Bona Nova";
   text-align: left;
+}
+.reservation__left-part-pic {
+  width: 49.4791666667vw;
+  height: 82.4074074074vh;
 }
 .reservation__right-part {
   display: flex;
@@ -167,6 +168,33 @@
   margin-bottom: 3.4259259259vh;
 }
 
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts__left-part {
+  margin: 9.4444444444vh auto;
+}
+.contacts__left-part h2 {
+  width: 24.21875vw;
+  height: 11.3888888889vh;
+  font: bold 2rem/1 "PT Sans";
+  margin-bottom: 6.3888888889vh;
+}
+.contacts__left-part address {
+  font: 1.375rem/1.24 "PT Sans";
+  width: 24.1666666667vw;
+  height: 20vh;
+}
+.contacts__left-part address strong {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+.contacts__left-part address p {
+  margin-top: 20px;
+}
+
 .footer {
   width: 100%;
   display: flex;
@@ -178,10 +206,9 @@
   flex-wrap: wrap;
 }
 .footer__name {
-  font: 1.625rem/1 "Bona Nova";
+  font: bold 1.625rem/1 "Bona Nova";
   margin-left: 16.8229166667vw;
   letter-spacing: 1.04px;
-  font-weight: bold;
 }
 .footer__icons {
   font: 1.625rem/1 "PT Sans";
