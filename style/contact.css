@@ -24,6 +24,10 @@
   justify-content: center;
 }
 
+.clicked {
+  color: #9E9E9E;
+}
+
 .intro {
   color: #fff;
   height: 10.2777777778vh;

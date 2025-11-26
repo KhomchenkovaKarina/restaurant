@@ -24,6 +24,10 @@ main::before, .intro::before {
   justify-content: center;
 }
 
+.clicked {
+  color: #9E9E9E;
+}
+
 .nav__button {
   color: #fff;
   font: bold 1.25rem/1 "PT Sans";

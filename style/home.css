@@ -25,6 +25,10 @@
   justify-content: center;
 }
 
+.clicked {
+  color: #9E9E9E;
+}
+
 .intro {
   color: #fff;
   height: 100%;
@@ -72,9 +76,6 @@
 }
 .intro ul li {
   cursor: pointer;
-}
-.intro ul li:active {
-  color: #9E9E9E;
 }
 .intro main {
   height: 100%;

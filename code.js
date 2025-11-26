@@ -13,3 +13,4 @@ new Swiper('.reviews', {
         prevEl: '.reviews__arrow-left',
     },
 })
+
