@@ -1,6 +1,18 @@
 @import 'colors';
 @import 'common';
 
+#burger-list {
+    display: none;
+}
+
+#burger-btn {
+    display: none;
+}
+
+#burger-toggle {
+    display: none;
+}
+
 .intro {
     color: #fff;
     height: 100%;
@@ -15,12 +27,12 @@
         width: 100%;
     }
 
-    > * {
+    >* {
         position: relative;
         z-index: 2;
     }
 
-    &__header{
+    &__header {
         width: 100%;
         line-height: 1;
         background-color: rgba(0, 0, 0, 0.6);
@@ -29,11 +41,11 @@
     }
 
     &__header-wrapper {
-    height: heightVh(111);
-    margin: 0 widthVw(320);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        height: heightVh(111);
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
     }
 
     &__header-left {
@@ -68,6 +80,7 @@
         align-items: center;
         justify-content: center;
         height: 100%;
+
         h1 {
             font: sizeToRem(96)/1 'Bona Nova';
             margin-bottom: heightVh(35);
@@ -103,6 +116,7 @@
             font: bold sizeToRem(32)/1 'Bona Nova';
             margin-bottom: heightVh(30);
         }
+
         p {
             font: sizeToRem(18)/1.2 'PT Sans';
             margin-bottom: heightVh(15);
@@ -151,9 +165,10 @@
         @extend %dark-layout;
     }
 
-    > * {
+    >* {
         position: relative;
-        z-index: 2; /* поднимаем контент выше подложки */
+        z-index: 2;
+        /* поднимаем контент выше подложки */
     }
 
     h2 {
@@ -220,13 +235,13 @@
         position: absolute;
         top: 70% !important;
         width: widthVw(91);
-        height: heightVh(162);  
+        height: heightVh(162);
     }
-    
+
     &__arrow-left {
         left: 10px;
     }
-    
+
     &__arrow-right {
         right: 10px;
     }
@@ -302,6 +317,123 @@
 
 }
 
-.footer > * {
+.footer>* {
     margin-top: heightVh(50);
 }
+
+@media (max-width: 700px) {
+    #burger-btn {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 25px;
+        background-size: contain;
+        cursor: pointer;
+
+        &::after,
+        &::before,
+        & span {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 2px;
+            transition: .3s;
+        }
+
+        &::before {
+            content: '';
+            top: 0;
+        }
+
+        &::after {
+            content: '';
+            bottom: 0;
+        }
+
+        & span {
+            top: 11px;
+        }
+    }
+
+    #burger-toggle:checked ~ label::after {
+        transform: rotate(45deg);
+        bottom: 10px;
+    }
+
+    #burger-toggle:checked ~ #burger-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        gap: 3vh;
+        width: 50vw;
+        height: 100vh;
+        background-color: #000;
+    }
+
+    #burger-toggle:checked ~ #burger-list > * {
+        margin-left: 5vw;
+    }
+
+    #burger-toggle:checked ~ label::before {
+        transform: rotate(-45deg);
+        top: 12px;
+    }
+
+    #burger-toggle:checked ~ label span {
+        transform: rotate(-45deg);
+        top: 12px;
+    }
+
+    // #burger-list {
+    //     display: flex;
+    //     flex-direction: column;
+    //     background-color: #000;
+    //     text-align: center;
+    // }
+
+    .intro {
+        background: url(../assets/images/black-bgr.jpg) no-repeat;
+
+        &::before {
+            height: 100%;
+        }
+
+        &__header-wrapper {
+            background-color: #000;
+            height: heightVh(65);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        &__header-left {
+            margin-left: widthVw(150);
+            font: bold sizeToRem(16)/1 'Bona Nova';
+            letter-spacing: 0.06em;
+        }
+
+        &__header-right {
+            margin-right: widthVw(150);
+        }
+
+        ul {
+            display: none
+        }   
+
+        &__middle-part {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            h1 {
+                font: sizeToRem(96)/1 'Bona Nova';
+                margin-bottom: heightVh(35);
+                text-align: center;
+            }
+        }
+    }}
