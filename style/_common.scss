@@ -3,11 +3,19 @@
 }
 
 @function heightVh($pixels) {
-    @return #{$pixels/1080 * 100}vh;
+    @return #{$pixels / 1080 * 100}vh;
 }
 
 @function widthVw($pixels) {
-    @return #{$pixels/1920 * 100}vw;
+    @return #{$pixels / 1920 * 100}vw;
+}
+
+@function procWidth($realWidth, $initialWidth: 360) {
+    @return percentage($realWidth / $initialWidth);
+}
+
+@function procHeight($realHeight, $initialHeight) {
+    @return percentage($realHeight / $initialHeight);
 }
 
 %dark-layout {

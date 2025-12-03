@@ -38,7 +38,7 @@
                             <span></span>
                         </label>
                         <ul id="burger-list">
-                            <li><a href="/index.html">Главная</a></li>
+                            <li><a href="/index.html" class="clicked">Главная</a></li>
                             <li><a href="/menu/index.html">Меню</a></li>
                             <li><a href="/contact/index.html">Контакты</a></li>
                         </ul>
@@ -53,14 +53,17 @@
         </header>
         <div class="intro__middle-part">
             <h1>Ресторан<br>«ЭКЛЕКТИКА»</h1>
-            <button class="book-now"><a href="">Забронировать онлайн</a></button>
+            <div class="intro__buttons">
+                <button class="book-now"><a href="">Забронировать онлайн</a></button>
+                <button class="intro__sale-btn"><a href="">Акция</a></button>
+            </div>
         </div>
     </section>
 
     <main>
         <section class="gallery image-slider swiper-container">
             <div class="gallery__wrapper image-slider__wrapper swiper-wrapper">
-                <div class="gallery__first-slide image-slider__slide swiper-slide">
+                <div class="gallery__slide image-slider__slide swiper-slide">
                     <div class="gallery__left-part image-slider__image">
                         <img loading="lazy" class="gallery__image" src="assets/images/about-us.png" alt="фото внутри ресторана">
                     </div>
@@ -86,7 +89,7 @@
                     </div>
                 </div>
 
-                <div class="gallery__second-slide image-slider__slide swiper-slide">
+                <div class="gallery__slide image-slider__slide swiper-slide">
                     <div class="gallery__left-part image-slider__image">
                         <img loading="lazy" class="gallery__image" src="assets/images/address.png" alt="фото из кухни ресторана">
                     </div>
@@ -116,100 +119,96 @@
         <section class="reviews swiper-container">
             <h2>Отзывы</h2>
             <div class="reviews__wrapper swiper-wrapper">
-                <div class='reviews__block swiper-slide'>
-                    <div class="reviews__review">
-                        <img loading="lazy" class="reviews__avatar" src="assets/images/avatar-natalya.svg"
-                            alt="Фото пользователя"></img>
-                        <div class="reviews__right-part-review">
-                            <div class="reviews__author-and-stars">
-                                <h3 class="reviews__author">Наталья Иванова</h3>
-                                <div class="reviews__stars">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                </div>
+                <div class="reviews__review swiper-slide reviews__first-review">
+                    <img loading="lazy" class="reviews__avatar" src="assets/images/avatar-natalya.svg"
+                        alt="Фото пользователя"></img>
+                    <div class="reviews__right-part-review">
+                        <div class="reviews__author-and-stars">
+                            <h3 class="reviews__author">Наталья Иванова</h3>
+                            <div class="reviews__stars">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
                             </div>
-                            <p class="reviews__text">
-                                Посетили семейный ресторан вместе с мужем и детьми — отличное место для
-                                семейного ужина! Обстановка очень уютная, а обслуживание выше всяких похвал.
-                                Наши дети в восторге от детского меню, которое оказалось не только вкусным,
-                                но и заботливо подготовленным с учетом детских предпочтений. Будем рекомендовать
-                                всем друзьям и обязательно вернемся.
-                            </p>
                         </div>
-                    </div>
-
-                    <div class="reviews__review">
-                        <img loading="lazy" class="reviews__avatar" src="assets/images/Avatar-Alex.svg" alt="Фото пользователя"></img>
-                        <div class="reviews__right-part-review">
-                            <div class="reviews__author-and-stars">
-                                <h3 class="reviews__author">Александр Петров</h3>
-                                <div class="reviews__stars">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                </div>
-                            </div>
-                            <p class="reviews__text">
-                                Этот ресторан — настоящая находка! Проводил здесь деловой ужин с партнерами, и все
-                                остались
-                                в восторге. Обслуживание на высшем уровне, персонал внимателен к каждой детали. Кухня
-                                порадовала
-                                своим разнообразием. Отличное место для деловых встреч и ужинов в уютной обстановке.
-                                Рекомендую!
-                            </p>
-                        </div>
+                        <p class="reviews__text">
+                            Посетили семейный ресторан вместе с мужем и детьми — отличное место для
+                            семейного ужина! Обстановка очень уютная, а обслуживание выше всяких похвал.
+                            Наши дети в восторге от детского меню, которое оказалось не только вкусным,
+                            но и заботливо подготовленным с учетом детских предпочтений. Будем рекомендовать
+                            всем друзьям и обязательно вернемся.
+                        </p>
                     </div>
                 </div>
 
-                <div class="reviews__block swiper-slide">
-                    <div class="reviews__review swiper-slide">
-                        <img loading="lazy" class="reviews__avatar" src="assets/images/igor'.svg" alt="Фото пользователя"></img>
-                        <div class="reviews__right-part-review">
-                            <div class="reviews__author-and-stars">
-                                <h3 class="reviews__author">Игорь Ковалев</h3>
-                                <div class="reviews__stars">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                </div>
+                <div class="reviews__review swiper-slide reviews__second-review">
+                    <img loading="lazy" class="reviews__avatar" src="assets/images/Avatar-Alex.svg" alt="Фото пользователя"></img>
+                    <div class="reviews__right-part-review">
+                        <div class="reviews__author-and-stars">
+                            <h3 class="reviews__author">Александр Петров</h3>
+                            <div class="reviews__stars">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
                             </div>
-                            <p class="reviews__text">
-                                Провели здесь день рождения — атмосфера просто великолепная. Персонал веселый и
-                                отзывчивый,
-                                кухня порадовала. Особенно понравились
-                                закуски к пиву! Обязательно будем возвращаться, чтобы попробовать все блюда из меню.
-                            </p>
                         </div>
+                        <p class="reviews__text">
+                            Этот ресторан — настоящая находка! Проводил здесь деловой ужин с партнерами, и все
+                            остались
+                            в восторге. Обслуживание на высшем уровне, персонал внимателен к каждой детали. Кухня
+                            порадовала
+                            своим разнообразием. Отличное место для деловых встреч и ужинов в уютной обстановке.
+                            Рекомендую!
+                        </p>
                     </div>
+                </div>
 
-                    <div class="reviews__review swiper-slide">
-                        <img loading="lazy" class="reviews__avatar" src="assets/images/Marina.svg" alt="Фото пользователя"></img>
-                        <div class="reviews__right-part-review">
-                            <div class="reviews__author-and-stars">
-                                <h3 class="reviews__author">Марина Соколова</h3>
-                                <div class="reviews__stars">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                    <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
-                                </div>
+                <div class="reviews__review swiper-slide reviews__third-review">
+                    <img loading="lazy" class="reviews__avatar" src="assets/images/igor'.svg" alt="Фото пользователя"></img>
+                    <div class="reviews__right-part-review">
+                        <div class="reviews__author-and-stars">
+                            <h3 class="reviews__author">Игорь Ковалев</h3>
+                            <div class="reviews__stars">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
                             </div>
-                            <p class="reviews__text">
-                                Посетили семейный ресторан с подругами на девичнике, и это был наш лучший выбор! У нас
-                                был
-                                волшебный вечер — вкусная еда, отличные
-                                коктейли и веселая атмосфера. Обязательно вернемся сюда с мужьями! Очень рекомендую для
-                                дружеских посиделок и праздников.
-                            </p>
                         </div>
+                        <p class="reviews__text">
+                            Провели здесь день рождения — атмосфера просто великолепная. Персонал веселый и
+                            отзывчивый,
+                            кухня порадовала. Особенно понравились
+                            закуски к пиву! Обязательно будем возвращаться, чтобы попробовать все блюда из меню.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="reviews__review swiper-slide">
+                    <img loading="lazy" class="reviews__avatar" src="assets/images/Marina.svg" alt="Фото пользователя"></img>
+                    <div class="reviews__right-part-review">
+                        <div class="reviews__author-and-stars">
+                            <h3 class="reviews__author">Марина Соколова</h3>
+                            <div class="reviews__stars">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                                <img loading="lazy" class="reviews__star" src="assets/images/star.svg" alt="звезда">
+                            </div>
+                        </div>
+                        <p class="reviews__text">
+                            Посетили семейный ресторан с подругами на девичнике, и это был наш лучший выбор! У нас
+                            был
+                            волшебный вечер — вкусная еда, отличные
+                            коктейли и веселая атмосфера. Обязательно вернемся сюда с мужьями! Очень рекомендую для
+                            дружеских посиделок и праздников.
+                        </p>
                     </div>
                 </div>
             </div>

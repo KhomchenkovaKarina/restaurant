@@ -1,6 +1,8 @@
 @import 'colors';
 @import 'common';
 
+
+
 #burger-list {
     display: none;
 }
@@ -20,6 +22,9 @@
     background: url(../assets/images/home-bgr.png) no-repeat;
     background-size: cover;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 
     &::before {
         @extend %dark-layout;
@@ -80,6 +85,7 @@
         align-items: center;
         justify-content: center;
         height: 100%;
+        padding-top: heightVh(111);
 
         h1 {
             font: sizeToRem(96)/1 'Bona Nova';
@@ -87,12 +93,17 @@
             text-align: center;
         }
     }
+
+    &__sale-btn {
+            display: none;
+        }
 }
 
 .gallery {
     &__image {
         width: widthVw(950);
         height: heightVh(653);
+        object-fit: cover;
     }
 
     &__right-part {
@@ -182,6 +193,19 @@
     &__wrapper {
         // width: 100%;
         height: heightVh(650);
+        display: flex;
+        // justify-content: center;
+        min-width: 0;
+        gap: 35px;
+        margin-left: widthVw(258);
+    }
+
+    &__second-review {
+        margin-right: widthVw(277) !important;
+    }
+
+    &__third-review {
+        margin-left:widthVw(210) !important;
     }
 
     &__block {
@@ -321,7 +345,7 @@
     margin-top: heightVh(50);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
     #burger-btn {
         display: block;
         position: relative;
@@ -356,53 +380,52 @@
         }
     }
 
-    #burger-toggle:checked ~ label::after {
+    #burger-toggle:checked~label::after {
         transform: rotate(45deg);
         bottom: 10px;
     }
 
-    #burger-toggle:checked ~ #burger-list {
+    #burger-toggle:checked~label::before {
+        transform: rotate(-45deg);
+        top: 12px;
+    }
+
+    #burger-toggle:checked~label span {
+        transform: rotate(-45deg);
+        top: 12px;
+    }
+
+    #burger-toggle:checked~#burger-list {
         display: flex;
         flex-direction: column;
         position: absolute;
         right: 0;
-        gap: 3vh;
         width: 50vw;
         height: 100vh;
         background-color: #000;
     }
 
-    #burger-toggle:checked ~ #burger-list > * {
+    #burger-toggle:checked~#burger-list>* {
         margin-left: 5vw;
+        margin-top: heightVh(30);
     }
 
-    #burger-toggle:checked ~ label::before {
-        transform: rotate(-45deg);
-        top: 12px;
+    #burger-toggle:checked~#burger-list :first-child {
+        margin-top: heightVh(71);
     }
-
-    #burger-toggle:checked ~ label span {
-        transform: rotate(-45deg);
-        top: 12px;
-    }
-
-    // #burger-list {
-    //     display: flex;
-    //     flex-direction: column;
-    //     background-color: #000;
-    //     text-align: center;
-    // }
 
     .intro {
-        background: url(../assets/images/black-bgr.jpg) no-repeat;
+        background: url(../assets/images/for_mobile.svg) no-repeat;
+        background-size: cover;
 
         &::before {
             height: 100%;
+            background: rgba(0, 0, 0, 0.3);
         }
 
         &__header-wrapper {
             background-color: #000;
-            height: heightVh(65);
+            height: 11vh;
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -411,7 +434,7 @@
 
         &__header-left {
             margin-left: widthVw(150);
-            font: bold sizeToRem(16)/1 'Bona Nova';
+            font: bold 1.5rem/1 'Bona Nova';
             letter-spacing: 0.06em;
         }
 
@@ -421,19 +444,158 @@
 
         ul {
             display: none
-        }   
+        }
 
         &__middle-part {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
+            justify-content: space-between;
+            align-items: start;
 
             h1 {
-                font: sizeToRem(96)/1 'Bona Nova';
-                margin-bottom: heightVh(35);
-                text-align: center;
+                font: bold 3.5rem/1.25 'Bona Nova';
+                margin-top: 20vh;
+                text-align: left;
+                margin-left: 7vw;
+            }
+
+            button {
+                align-self: center;
+                width: procWidth(305, 360);
+                height: 9vh;
             }
         }
-    }}
+
+        &__buttons {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            padding-bottom: 10vh;
+        }
+
+        &__sale-btn {
+            height: procHeight(50, 550);
+            align-self: center;
+            background-color: transparent;
+            border: 3px solid #ffffff;
+            color: #fff;
+            border-radius: 10px;
+            font: bold sizeToRem(27)/1 'PT Sans';
+            padding: heightVh(22) widthVw(70);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+.gallery {
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__right-part {
+        width: 90%;
+        height: heightVh(500);
+    }
+
+    &__wrapper-right-part {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+}
+
+.reviews {
+    height: 100%;
+
+    &__wrapper {
+        // width: 100%;
+        height: heightVh(650);
+        display: flex;
+        // justify-content: center;
+        margin: 0;
+        min-width: 0;
+        gap: 35px;
+    }
+
+
+    &__third-review {
+        margin-left:widthVw(210) !important;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: center;
+        gap: widthVw(35);
+    }
+
+    &__review {
+        width: 90% !important;
+        height: 70%;
+        background: #fff;
+        display: flex;
+        gap: widthVw(30);
+        min-width: 0;
+    }
+
+    &__author-and-stars {
+        display: flex;
+        min-width: 0;
+        padding-top: heightVh(48);
+        justify-content: space-between;
+    }
+
+    &__avatar {
+        width: widthVw(104);
+        height: heightVh(104);
+        margin-left: widthVw(27);
+        margin-top: heightVh(31);
+    }
+
+    &__star {
+        margin: -3px;
+    }
+
+    &__author {
+        font-weight: bold;
+        font-size: sizeToRem(24);
+    }
+
+    &__text {
+        line-height: 1.2;
+        margin-top: heightVh(33);
+        font-size: sizeToRem(18);
+        width: widthVw(459);
+    }
+
+    &__arrow-left,
+    &__arrow-right {
+        color: transparent;
+        position: absolute;
+        top: 70% !important;
+        width: widthVw(91);
+        height: heightVh(162);
+    }
+
+    &__arrow-left {
+        left: 10px;
+    }
+
+    &__arrow-right {
+        right: 10px;
+    }
+}
+
+
+
+}
