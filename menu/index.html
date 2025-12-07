@@ -1,149 +1,170 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>«Эклектика» в Москве</title>
-        <meta name="keywords"
-            content="ресторан Эклектика, изысканная кухня, шеф-повар, подбор ингредиентов, уютные залы, семейные ужины, 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>«Эклектика» в Москве</title>
+    <meta name="keywords"
+        content="ресторан Эклектика, изысканная кухня, шеф-повар, подбор ингредиентов, уютные залы, семейные ужины, 
                 романтические свидания, деловые обеды, высокий сервис, незабываемые впечатления, атмосфера комфорта, гастрономические удовольствия">
-        <meta name="description"
-            content="Ресторан «Эклектика» приглашает гостей насладиться атмосферой роскоши и элегантности в самом сердце Москвы. 
+    <meta name="description"
+        content="Ресторан «Эклектика» приглашает гостей насладиться атмосферой роскоши и элегантности в самом сердце Москвы. 
                 Здесь царит гармония стиля и вкуса, сочетающая уютные интерьеры и высокое мастерство поваров. Уютные залы идеально подходят как для семейного отдыха, 
                 так и для деловых встреч или романтического вечера. Шеф-повара ресторана используют только свежие и качественные продукты, создавая уникальные 
                 блюда, которые порадуют даже самых требовательных гурманов. Внимательное обслуживание, индивидуальный подход и приятная музыка создадут атмосферу 
                 праздника и комфорта. Посещение ресторана «Эклектика» станет настоящим удовольствием для тех, кто ценит прекрасное сочетание изысканной кухни и гостеприимства.">
-        <meta property="og:locale" content="ru_RU">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="«Эклектика» в Москве — изысканные блюда и атмосфера уюта">
-        <meta property="og:image:alt" content="Фото ресторана">
-        <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="../style/reset.css">
-        <link rel="stylesheet" href="../style/fonts.css">
-        <link rel="stylesheet" href="../style/menu.css">
-    </head>
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="«Эклектика» в Москве — изысканные блюда и атмосфера уюта">
+    <meta property="og:image:alt" content="Фото ресторана">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/menu.css">
+</head>
 
-    <body>
-        <header class="intro">
-            <div class="intro__header-container">
-                <div class="intro__header-wrapper">
-                    <p class="intro__header-left">ЭКЛЕКТИКА</p>
-                    <nav class="intro__header-right">
-                        <ul>
+<body>
+    <section class="intro">
+        <header class="intro__header">
+            <div class="intro__header-wrapper">
+                <p class="intro__header-left">ЭКЛЕКТИКА</p>
+                <nav class="intro__header-right">
+                    <nav class="burger-menu">
+                        <input type="checkbox" id="burger-toggle">
+                        <label for="burger-toggle" href="#" id="burger-btn">
+                            <span></span>
+                        </label>
+                        <ul id="burger-list">
                             <li><a href="/index.html">Главная</a></li>
                             <li><a href="/menu/index.html" class="clicked">Меню</a></li>
                             <li><a href="/contact/index.html">Контакты</a></li>
                         </ul>
                     </nav>
-                </div>
+                    <ul>
+                        <li><a href="/index.html" id="nav-el1">Главная</a></li>
+                        <li><a href="/menu/index.html" class="clicked" id="nav-el2">Меню</a></li>
+                        <li><a href="/contact/index.html" id="nav-el3">Контакты</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
+    </section>
 
-        <main>
-            <nav class="nav">
-                <ul>
-                    <li class="nav__button"><a href="/menu/index.html" id="nav-el1">Основные блюда</a></li>
-                    <li class="nav__button"><a href="/menu/salats.html" id="nav-el2">Закуски и салаты</a></li>
-                    <li class="nav__button"><a href="/menu/desserts.html" id="nav-el3">Десерты</a></li>
-                </ul>
-                <div class="nav__reservation">ОНЛАЙН-<br>БРОНИРОВАНИЕ</div>
-            </nav>
+    <main>
+        <nav class="nav">
+            <ul>
+                <li class="nav__button"><a href="/menu/index.html" id="nav-el1">Основные блюда</a></li>
+                <li class="nav__button"><a href="/menu/salats.html" id="nav-el2">Закуски и салаты</a></li>
+                <li class="nav__button"><a href="/menu/desserts.html" id="nav-el3">Десерты</a></li>
+            </ul>
+            <div class="nav__reservation">ОНЛАЙН-<br>БРОНИРОВАНИЕ</div>
+        </nav>
 
-            <section class="menu">
-                <div class="menu__wrapper">
-                    <div class="menu__card">
-                        <figure>
-                            <img class="menu__image" src="../assets/images/main-meals/dorado.png" alt="Дорадо с овощами гриль">
-                            <figcaption>
-                                <div class="menu__bottom">
-                                    <div class="menu__bottom-text">
-                                        <p class="menu__bottom-name">Дорадо с овощами гриль</p>
-                                        <p class="menu__bottom-price">1500₽</p>
-                                    </div>
-                                    <button class="menu__bottom-button"><a href="">Подробнее</a></button>
+        <section class="menu">
+            <div class="menu__wrapper">
+                <div class="menu__card">
+                    <figure>
+                        <img class="menu__image" src="../assets/images/main-meals/stake.png"
+                            alt="Стейк из премиальной вырезки">
+                        <figcaption>
+                            <div class="menu__bottom">
+                                <div class="menu__bottom-text">
+                                    <p class="menu__bottom-name">Стейк из премиальной вырезки<br>с брокколи и
+                                        горчичным соусом</p>
+                                    <p class="menu__bottom-price">2350₽</p>
                                 </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <div class="menu__card">
-                        <figure>
-                            <img class="menu__image" src="../assets/images/main-meals/stake.png" alt="Стейк из премиальной вырезки">
-                            <figcaption>
-                                <div class="menu__bottom">
-                                    <div class="menu__bottom-text">
-                                        <p class="menu__bottom-name">Стейк из премиальной вырезки<br>с брокколи и горчичным соусом</p>
-                                        <p class="menu__bottom-price">2350₽</p>
-                                    </div>
-                                    <button class="menu__bottom-button"><a href="">Подробнее</a></button>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <div class="menu__card">
-                        <figure>
-                            <img class="menu__image" src="../assets/images/main-meals/kozlyatina.png" alt="Тушеная козлятина на кости с картофельным пюре на сливках">
-                            <figcaption>
-                                <div class="menu__bottom">
-                                    <div class="menu__bottom-text">
-                                        <p class="menu__bottom-name">Тушеная козлятина на кости<br>с картофельным пюре на сливках</p>
-                                        <p class="menu__bottom-price">2500₽</p>
-                                    </div>
-                                    <button class="menu__bottom-button"><a href="">Подробнее</a></button>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <div class="menu__card">
-                        <figure>
-                            <img class="menu__image" src="../assets/images/main-meals/lazanya.png" alt="Итальянская классическая лазанья с говядиной">
-                            <figcaption>
-                                <div class="menu__bottom">
-                                    <div class="menu__bottom-text">
-                                        <p class="menu__bottom-name">Итальянская классическая лазанья<br>с говядиной в свежих томатах</p>
-                                        <p class="menu__bottom-price">1450₽</p>
-                                    </div>
-                                    <button class="menu__bottom-button"><a href="">Подробнее</a></button>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <div class="menu__card">
-                        <figure>
-                            <img class="menu__image" src="../assets/images/main-meals/vok.png" alt="Вок с рисом и курицей под соусом терияки">
-                            <figcaption>
-                                <div class="menu__bottom">
-                                    <div class="menu__bottom-text">
-                                        <p class="menu__bottom-name">Вок с рисом и курицей<br>  под соусом терияки</p>
-                                        <p class="menu__bottom-price">1000₽</p>
-                                    </div>
-                                    <button class="menu__bottom-button"><a href="">Подробнее</a></button>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <div class="menu__card">
-                        <figure>
-                            <img class="menu__image" src="../assets/images/main-meals/hinkali.png" alt="Хинкали с говядиной, калакури и аджарским соусом">
-                            <figcaption>
-                                <div class="menu__bottom">
-                                    <div class="menu__bottom-text">
-                                        <p class="menu__bottom-name">Хинкали с говядиной, калакури<br>и аджарским соусом</p>
-                                        <p class="menu__bottom-price">1250₽</p>
-                                    </div>
-                                    <button class="menu__bottom-button"><a href="">Подробнее</a></button>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
+                                <button class="menu__bottom-button"><a href="">Подробнее</a></button>
+                            </div>
+                        </figcaption>
+                    </figure>
                 </div>
-            </section>
-        </main>
+
+                <div class="menu__card">
+                    <figure>
+                        <img class="menu__image" src="../assets/images/main-meals/kozlyatina.png"
+                            alt="Тушеная козлятина на кости с картофельным пюре на сливках">
+                        <figcaption>
+                            <div class="menu__bottom">
+                                <div class="menu__bottom-text">
+                                    <p class="menu__bottom-name">Тушеная козлятина на кости<br>с картофельным пюре
+                                        на сливках</p>
+                                    <p class="menu__bottom-price">2500₽</p>
+                                </div>
+                                <button class="menu__bottom-button"><a href="">Подробнее</a></button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="menu__card">
+                    <figure>
+                        <img class="menu__image" src="../assets/images/main-meals/lazanya.png"
+                            alt="Итальянская классическая лазанья с говядиной">
+                        <figcaption>
+                            <div class="menu__bottom">
+                                <div class="menu__bottom-text">
+                                    <p class="menu__bottom-name">Итальянская классическая лазанья<br>с говядиной в
+                                        свежих томатах</p>
+                                    <p class="menu__bottom-price">1450₽</p>
+                                </div>
+                                <button class="menu__bottom-button"><a href="">Подробнее</a></button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="menu__card">
+                    <figure>
+                        <img class="menu__image" src="../assets/images/main-meals/vok.png"
+                            alt="Вок с рисом и курицей под соусом терияки">
+                        <figcaption>
+                            <div class="menu__bottom">
+                                <div class="menu__bottom-text">
+                                    <p class="menu__bottom-name">Вок с рисом и курицей<br> под соусом терияки</p>
+                                    <p class="menu__bottom-price">1000₽</p>
+                                </div>
+                                <button class="menu__bottom-button"><a href="">Подробнее</a></button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="menu__card">
+                    <figure>
+                        <img class="menu__image" src="../assets/images/main-meals/hinkali.png"
+                            alt="Хинкали с говядиной, калакури и аджарским соусом">
+                        <figcaption>
+                            <div class="menu__bottom">
+                                <div class="menu__bottom-text">
+                                    <p class="menu__bottom-name">Хинкали с говядиной, калакури<br>и аджарским соусом
+                                    </p>
+                                    <p class="menu__bottom-price">1250₽</p>
+                                </div>
+                                <button class="menu__bottom-button"><a href="">Подробнее</a></button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="menu__card">
+                    <figure>
+                        <img class="menu__image" src="../assets/images/main-meals/dorado.png"
+                            alt="Дорадо с овощами гриль">
+                        <figcaption>
+                            <div class="menu__bottom">
+                                <div class="menu__bottom-text">
+                                    <p class="menu__bottom-name">Дорадо с овощами гриль</p>
+                                    <p class="menu__bottom-price">1500₽</p>
+                                </div>
+                                <button class="menu__bottom-button"><a href="">Подробнее</a></button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
 
         <footer class="footer">
             <p class="footer__name">ЭКЛЕКТИКА</p>
@@ -151,7 +172,8 @@
                 <p>Следите за нами в соцсетях</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="166" height="34" viewBox="0 0 166 34" fill="none">
                     <title>Иконка социальных сетей</title>
-                    <desc>В наших соцсетях вы узнаете больше про идею заведения, нашу историю и грядущие мероприятия!</desc>
+                    <desc>В наших соцсетях вы узнаете больше про идею заведения, нашу историю и грядущие мероприятия!
+                    </desc>
                     <path
                         d="M20.8184 7.41056L2.7962 15.5417C1.56626 16.1197 1.57338 16.9225 2.57054 17.2804L7.19754 18.9692L17.9031 11.0664C18.4093 10.7061 18.8718 10.8999 18.4917 11.2947L9.81802 20.4534H9.81599L9.81802 20.4546L9.49887 26.0347C9.96645 26.0347 10.1728 25.7837 10.4351 25.4877L12.6825 22.9307L17.3573 26.9707C18.2193 27.5261 18.8383 27.2407 19.0528 26.0371L22.1215 9.116C22.4356 7.64247 21.6407 6.97529 20.8184 7.41056Z"
                         fill="white" />
@@ -189,4 +211,4 @@
             </div>
         </footer>
         <!-- <script src="/code.js"></script> -->
-    </body>
+</body>

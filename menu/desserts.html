@@ -25,20 +25,31 @@
     </head>
 
     <body>
-        <header class="intro">
-            <div class="intro__header-container">
-                <div class="intro__header-wrapper">
-                    <p class="intro__header-left">ЭКЛЕКТИКА</p>
-                    <nav class="intro__header-right">
-                        <ul>
+        <section class="intro">
+        <header class="intro__header">
+            <div class="intro__header-wrapper">
+                <p class="intro__header-left">ЭКЛЕКТИКА</p>
+                <nav class="intro__header-right">
+                    <nav class="burger-menu">
+                        <input type="checkbox" id="burger-toggle">
+                        <label for="burger-toggle" href="#" id="burger-btn">
+                            <span></span>
+                        </label>
+                        <ul id="burger-list">
                             <li><a href="/index.html">Главная</a></li>
                             <li><a href="/menu/index.html" class="clicked">Меню</a></li>
                             <li><a href="/contact/index.html">Контакты</a></li>
                         </ul>
                     </nav>
-                </div>
+                    <ul>
+                        <li><a href="/index.html" id="nav-el1">Главная</a></li>
+                        <li><a href="/menu/index.html" class="clicked" id="nav-el2">Меню</a></li>
+                        <li><a href="/contact/index.html" id="nav-el3">Контакты</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
+    </section>
 
         <main>
             <nav class="nav">

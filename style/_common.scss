@@ -1,22 +1,45 @@
-@function sizeToRem($pixels) {
-    @return #{$pixels / 16}rem;
-}
+@use "sass:math";
+@use 'colors' as *;
 
-@function heightVh($pixels) {
-    @return #{$pixels / 1080 * 100}vh;
+@function sizeToRem($pixels) {
+    @return #{math.div($pixels, 16)}rem;
 }
 
 @function widthVw($pixels) {
-    @return #{$pixels / 1920 * 100}vw;
+    @return #{math.div($pixels, 1920) * 100}vw;
+}
+
+@function heightVh($pixels) {
+    @return #{math.div($pixels, 1080) * 100}vh;
 }
 
 @function procWidth($realWidth, $initialWidth: 360) {
-    @return percentage($realWidth / $initialWidth);
+    @return math.percentage(math.div($realWidth, $initialWidth));
 }
 
 @function procHeight($realHeight, $initialHeight) {
-    @return percentage($realHeight / $initialHeight);
+    @return math.percentage(math.div($realHeight, $initialHeight));
 }
+
+#burger-list {
+    display: none;
+}
+
+#burger-btn {
+    display: none;
+}
+
+#burger-toggle {
+    display: none;
+} //for header
+
+.nav__button {
+    color: #fff;
+    font: bold sizeToRem(20)/1 'PT Sans';
+    border: 2px solid #fff;
+    padding: 10px 32px;
+    border-radius: 10px;
+} //from menu
 
 %dark-layout {
     content: '';
@@ -42,7 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} //orange button
 
 .clicked {
     color: #9E9E9E;

@@ -1,19 +1,5 @@
-@import 'colors';
-@import 'common';
-
-
-
-#burger-list {
-    display: none;
-}
-
-#burger-btn {
-    display: none;
-}
-
-#burger-toggle {
-    display: none;
-}
+@use 'colors' as *;
+@use 'common' as *;
 
 body {
     overflow-x: hidden;

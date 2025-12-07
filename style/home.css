@@ -1,5 +1,25 @@
 @charset "UTF-8";
-.reviews::before, .intro::before {
+#burger-list {
+  display: none;
+}
+
+#burger-btn {
+  display: none;
+}
+
+#burger-toggle {
+  display: none;
+}
+
+.nav__button {
+  color: #fff;
+  font: bold 1.25rem/1 "PT Sans";
+  border: 2px solid #fff;
+  padding: 10px 32px;
+  border-radius: 10px;
+}
+
+.intro::before, .reviews::before {
   content: "";
   position: absolute;
   top: 0;
@@ -27,18 +47,6 @@
 
 .clicked {
   color: #9E9E9E;
-}
-
-#burger-list {
-  display: none;
-}
-
-#burger-btn {
-  display: none;
-}
-
-#burger-toggle {
-  display: none;
 }
 
 body {
