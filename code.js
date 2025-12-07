@@ -8,19 +8,29 @@ new Swiper('.image-slider', {
 
 new Swiper('.reviews', {
     //arrows
+    spaceBetween: 20,
     navigation: {
         nextEl: '.reviews__arrow-right',
         prevEl: '.reviews__arrow-left',
     },
-    slidesPerView: 2,
-    spaceBetween: 30,
 
     breakpoints: {
-        //when screen less than 750px
-        750: {
-            slidesPerView: 1,
-            spaceBetween: 10,
+        0: {
+            loop: true,
+            slidesPerView: 1.3,
+            slidesPerGroup: 1,
+            navigation: {
+                nextEl: '.reviews__mobile-next',
+                prevEl: null,
+            },       // листаем по 1
+        },
+        // когда ширина ≥ 857px (планшеты и больше)
+        857: {
+            loop: false,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            // листаем сразу по 2 слайда
         }
     }
-})
+});
 
